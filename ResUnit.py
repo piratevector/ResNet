@@ -5,6 +5,7 @@ from functools import partial
 
 DefaultConv2D = partial(keras.layers.Conv2D, kernel_size=3, strides=1, padding="SAME", use_bias=False)
 
+@tf.keras.utils.register_keras_serializable()
 class ResUnit(keras.layers.Layer):
     def __init__(self, filters, strides=1, activation="relu", **kwargs):
         super().__init__(**kwargs)

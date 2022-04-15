@@ -1,5 +1,5 @@
 import keras
-import tensorflow as ts
+import tensorflow as tf
 from keras.layers import Layer, Activation, BatchNormalization, Conv2D
 from functools import partial
 

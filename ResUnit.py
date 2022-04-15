@@ -7,6 +7,10 @@ DefaultConv2D = partial(keras.layers.Conv2D, kernel_size=3, strides=1, padding="
 
 @tf.keras.utils.register_keras_serializable()
 class ResUnit(keras.layers.Layer):
+    import keras
+    import tensorflow as tf
+    from keras.layers import Layer, Activation, BatchNormalization, Conv2D
+    from functools import partial
     DefaultConv2D = partial(keras.layers.Conv2D, kernel_size=3, strides=1, padding="SAME", use_bias=False)
     def __init__(self, filters, strides=1, activation="relu", **kwargs):
         super().__init__(**kwargs)
